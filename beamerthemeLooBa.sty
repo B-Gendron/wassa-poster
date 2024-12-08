@@ -1,0 +1,211 @@
+% this style 
+% this style was created by Martin Weiglhofer and is based on the
+% style written by Philippe Dreuw and Thomas Deselaers from RWTH
+
+\ProvidesPackage{beamerthemeLooBa} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage{tangocolors}
+\selectcolormodel{cmyk}
+\mode<presentation>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\webpage{\setbeamertemplate{webpage}}
+\def\insertwebpage{\usebeamertemplate*{webpage}}
+
+\def\mail{\setbeamertemplate{mail}}
+\def\insertmail{\usebeamertemplate*{mail}}
+
+\def\logoleft{\setbeamertemplate{logoleft}}
+\def\insertlogoleft{\usebeamertemplate*{logoleft}}
+\def\logoright{\setbeamertemplate{logoright}}
+\def\insertlogoright{\usebeamertemplate*{logoright}}
+
+\definecolor{lbred}{rgb}{1.0, 0.231, 0.188}
+\definecolor{lbblue}{rgb}{0.345, 0.541, 1.0}
+\definecolor{lbgreen}{rgb}{0.298, 0.851, 0.392}
+\definecolor{lbmagenta}{rgb}{1.0, 0.176, 0.333}
+\definecolor{lborange}{rgb}{1.0, 0.584, 0.0}
+\definecolor{lblightblue}{rgb}{0.239, 0.678, 0.886}
+\definecolor{aclblue}{rgb}{0, 0, 0.596}
+
+
+\setbeamercolor{alerted text}{fg=lbblue}
+\setbeamercolor*{palette primary}{fg=gray!60!black,bg=gray!30!white}
+\setbeamercolor*{palette secondary}{fg=lbred!70!black,bg=gray!15!white}
+\setbeamercolor*{palette tertiary}{bg=lbred!80!black,fg=gray!10!white}
+\setbeamercolor*{palette quaternary}{fg=lbred,bg=gray!5!white}
+
+\setbeamercolor*{sidebar}{fg=lbred,bg=gray!15!white}
+
+\setbeamercolor*{palette sidebar primary}{fg=lbred!10!black}
+\setbeamercolor*{palette sidebar secondary}{fg=white}
+\setbeamercolor*{palette sidebar tertiary}{fg=lbred!50!black}
+\setbeamercolor*{palette sidebar quaternary}{fg=gray!10!white}
+
+% \setbeamercolor*{titlelike}{parent=palette primary}
+\setbeamercolor{titlelike}{parent=pallette primary,fg=gray}
+\setbeamercolor{frametitle}{fg=gray,bg=white}
+\setbeamercolor{frametitle right}{bg=gray!60!white}
+
+\setbeamercolor{headline}{bg=white}
+\setbeamercolor{separation line}{bg=black}
+\setbeamercolor{lower separation line head}{bg=black}
+
+\setbeamercolor{footline}{bg=white}
+\setbeamerfont{footline}{size=\large,series=\tt}
+\setbeamercolor{upper separation line foot}{bg=black}
+\setbeamercolor{lower separation line foot}{bg=black}
+
+\setbeamercolor*{separation line}{}
+\setbeamercolor*{fine separation line}{}
+
+\setbeamercolor{block title}{size=\normalsize,series=\bf,use=structure,fg=white,bg=lbblue}
+\setbeamercolor{block title alerted}{size=\large,series=\bf,use=alerted text,fg=white,bg=lborange}
+\setbeamercolor{block title example}{use=example text,fg=white,bg=lbgreen}
+
+\setbeamercolor{block body}{parent=normal text,use=block title,bg=block title.bg!5!bg}
+\setbeamercolor{block body alerted}{parent=normal text,use=block title alerted,bg=block title alerted.bg!30!bg}
+\setbeamercolor{block body example}{parent=normal text,use=block title example,bg=block title example.bg!5!bg}
+
+\setbeamercolor{itemize item}{fg=lbblue}
+\setbeamercolor{itemize subitem}{fg=lbblue}
+\setbeamercolor{itemize subsubitem}{fg=lbblue}
+
+%\setbeamercolor{section/subsection in toc}{fg=lbblue}
+\setbeamercolor{section in toc}{fg=black,bg=white}
+\setbeamercolor{subsection in toc}{fg=black,bg=white}
+
+\setbeamercolor{structure}{fg=lbblue}
+\setbeamertemplate{navigation symbols}{}  % no navigation on a poster
+\setbeamertemplate{items}[square]
+
+%\setbeamertemplate{bibliography item}[square]
+\setbeamertemplate{bibliography item}[text]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{block begin}{
+  \vskip.75ex
+  \begin{beamercolorbox}[rounded=true,shadow=true,leftskip=1cm,colsep*=.75ex]{block title}%
+    \usebeamerfont*{block title}\insertblocktitle
+  \end{beamercolorbox}%
+  {\ifbeamercolorempty[bg]{block body}{}{\nointerlineskip\vskip-0.5pt}}%
+  \usebeamerfont{block body}%
+  \begin{beamercolorbox}[rounded=true,shadow=true,colsep*=.75ex,sep=.75ex,vmode]{block body}%
+    \ifbeamercolorempty[bg]{block body}{\vskip-.25ex}{\vskip-.75ex}\vbox{}%
+  }
+  \setbeamertemplate{block end}{
+  \end{beamercolorbox}
+}
+
+\setbeamertemplate{block alerted begin}{
+  \vskip.75ex
+  \begin{beamercolorbox}[rounded=true,shadow=true,leftskip=1cm,colsep*=.75ex]{block title alerted}%
+    \usebeamerfont*{block title alerted}\insertblocktitle
+  \end{beamercolorbox}%
+  {\ifbeamercolorempty[bg]{block alerted body}{}{\nointerlineskip\vskip-0.5pt}}%
+  \usebeamerfont{block body alerted}%
+  \begin{beamercolorbox}[rounded=true,shadow=true,colsep*=.75ex,sep=.75ex,vmode]{block body alerted}%
+    \ifbeamercolorempty[bg]{block body alerted}{\vskip-.25ex}{\vskip-.75ex}\vbox{}%
+  }
+
+\setbeamertemplate{block alerted end}{
+  \end{beamercolorbox}
+}
+
+\setbeamertemplate{block example begin}{
+  \vskip.75ex
+  \begin{beamercolorbox}[rounded=true,shadow=true,leftskip=1cm,colsep*=.75ex]{block title example}%
+    \usebeamerfont*{block title example}\insertblocktitle
+  \end{beamercolorbox}%
+  {\ifbeamercolorempty[bg]{block example body}{}{\nointerlineskip\vskip-0.5pt}}%
+  \usebeamerfont{block body example}%
+  \begin{beamercolorbox}[rounded=true,shadow=true,colsep*=.75ex,sep=.75ex,vmode]{block body example}%
+    \ifbeamercolorempty[bg]{block body example}{\vskip-.25ex}{\vskip-.75ex}\vbox{}%
+  }
+
+\setbeamertemplate{block example end}{
+  \end{beamercolorbox}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{headline}{  
+  \leavevmode
+
+  \begin{beamercolorbox}[wd=\paperwidth]{headline}
+    \begin{columns}[T]
+      \begin{column}{.02\paperwidth}
+      \end{column}
+      \begin{column}{.25\paperwidth}
+        \vskip1cm
+        \begin{center}
+          \insertlogoleft
+%          \includegraphics[height=4cm]{images/ist_logo.png}
+          %\includegraphics[width=.6\linewidth]{logos/i6-hks44}
+        \end{center}
+        \vskip1.5cm
+      \end{column}
+      \begin{column}{.495\paperwidth}
+        \vskip7ex
+        %\raggedleft
+        \centering
+        \usebeamercolor{title in headline}{\color{fg}\textbf{\Large{\inserttitle}}\\[4ex]}
+        \usebeamercolor{author in headline}{\color{fg}\large{\insertauthor}\\}
+        \usebeamercolor{institute in headline}{\color{fg}\large{\insertinstitute}\\[1ex]}     
+      \end{column}
+      \begin{column}{.25\paperwidth}
+        \vskip1cm
+        \begin{center}
+          \insertlogoright
+          %\includegraphics[height=4cm]{images/logo}
+          %\includegraphics[width=.7\linewidth]{}
+        \end{center}
+        \vskip1.5cm
+      \end{column}
+      \begin{column}{.03\paperwidth}
+      \end{column}
+    \end{columns}
+  \end{beamercolorbox}
+
+  \begin{beamercolorbox}[wd=\paperwidth]{lower separation line head}
+    \rule{0pt}{2pt}
+  \end{beamercolorbox}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{footline}{
+  \begin{beamercolorbox}[wd=\paperwidth]{upper separation line foot}
+    \rule{0pt}{2pt}
+  \end{beamercolorbox}
+  
+  \leavevmode%
+  \begin{beamercolorbox}[ht=4ex,leftskip=1cm,rightskip=1cm]{author in head/foot}%
+    \texttt{\insertwebpage}
+    \hfill
+    WASSA@ACL2024, Bangkok, Thailand
+    \hfill
+    \texttt{\insertmail}
+    \vskip1ex
+  \end{beamercolorbox}
+  \vskip0pt%
+  \begin{beamercolorbox}[wd=\paperwidth]{lower separation line foot}
+    \rule{0pt}{2pt}
+  \end{beamercolorbox}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Display a grid to help align images
+% \beamertemplategridbackground[1cm]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mode<all>
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-PDF-mode: t
+%%% TeX-master: "poster"
+%%% End: 
