@@ -1,5 +1,7 @@
 # SentEmoContext: Context-Aware Metric Learning for Efficient Emotion Recognition in Conversation
-Poster for the paper _SentEmoContext: Context-Aware Metric Learning for Efficient Emotion Recognition in Conversation_ accepted at WASSA@ACL 2024.
+Poster for the paper _SentEmoContext: Context-Aware Metric Learning for Efficient Emotion Recognition in Conversation_ accepted at WASSA@ACL 2024.  
+
+The code for this paper is available at [this GitHub repository](https://github.com/B-Gendron/sentEmoContext/tree/main).
 
 ## Cite the paper
 
